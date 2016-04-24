@@ -1,0 +1,150 @@
+PDS_VERSION_ID                = PDS3                                          
+/* label standards identifiers PDS Version 3.8 */                             
+                                                                              
+/* File Characteristics */                                                    
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 67                                            
+FILE_RECORDS                  = 178698                                        
+MD5_CHECKSUM                  = "8d705dc0dbbbed639c833910334bdd80"            
+                                                                              
+/* Pointers to Data Objects */                                                
+^TABLE                        = "GRD_IRON_CORRECTED_COUNTS_MAP.TAB"           
+PRODUCER_FULL_NAME            = "N. YAMASHITA"                                
+PRODUCER_INSTITUTION_NAME     = "PLANETARY SCIENCE INSTITUTE"                 
+                                                                              
+/* Identification Data Elements */                                            
+MISSION_NAME                  = "DAWN MISSION TO VESTA AND CERES"             
+MISSION_ID                    = "DAWN"                                        
+MISSION_PHASE_NAME            = "VESTA SCIENCE LAMO (VSL)"                    
+TARGET_NAME                   = "4 VESTA"                                     
+TARGET_TYPE                   = "ASTEROID"                                    
+INSTRUMENT_HOST_NAME          = "DAWN"                                        
+INSTRUMENT_HOST_ID            = "DAWN"                                        
+INSTRUMENT_ID                 = "GRAND"                                       
+INSTRUMENT_NAME               = "GAMMA-RAY AND NEUTRON DETECTOR"              
+DATA_SET_ID                   = "DAWN-A-GRAND-5-VESTA-GAMMA-IRON-COR-V1.0"    
+DATA_SET_NAME = "DAWN GRAND MAP VESTA GAMMA FE CORRECTED COUNTS V1.0"         
+PRODUCT_ID                    = "GRD_IRON_CORRECTED_COUNTS_MAP"               
+PRODUCT_TYPE                  = "DATA"                                        
+PRODUCT_VERSION_ID            = "1.0"                                         
+START_TIME                    = 2011-12-08T01:18:52                           
+STOP_TIME                     = 2012-04-27T17:16:15                           
+SPACECRAFT_CLOCK_START_COUNT  = "0376579234.000"                              
+SPACECRAFT_CLOCK_STOP_COUNT   = "0388819077.000"                              
+PRODUCT_CREATION_TIME         = 2013-07-31T22:52:20                           
+                                                                              
+/* Data Object Definitions */                                                 
+OBJECT                        = TABLE                                         
+ ROWS                         = 178698                                        
+ ROW_BYTES                    = 67                                            
+ COLUMNS                      = 8                                             
+ INTERCHANGE_FORMAT           = ASCII                                         
+ DESCRIPTION                  ="                                              
+   BGO counting rate of Fe 7.6 MeV gamma-ray peaks measured by GRaND on Dawn  
+   at Vesta. The counting rates were normalized for variations of live time,  
+   solid angle of Vesta, and galactic cosmic ray intensity, smoothed, and     
+   corrected for variations of neutron number density. For more details, see  
+   Yamashita et al., 2013 (doi:10.1111/maps.12139).                           
+  "                                                                           
+                                                                              
+ OBJECT                       = COLUMN                                        
+  NAME                        = "PIXEL_INDEX"                                 
+  DATA_TYPE                   = ASCII_INTEGER                                 
+  START_BYTE                  = 1                                             
+  BYTES                       = 10                                            
+  FORMAT                      = "I10"                                         
+  DESCRIPTION                 = "                                             
+    Pixel index. The map covers -90 to 90 degrees latitude and -180 to 180    
+    degrees east longitude in the Claudia Double Prime coordinate system.     
+    Pixels are indexed from west to east and from south to north, starting    
+    with 0.                                                                   
+   "                                                                          
+ END_OBJECT                   = COLUMN                                        
+                                                                              
+ OBJECT                       = COLUMN                                        
+  NAME                        = "MIN_LAT"                                     
+  DATA_TYPE                   = ASCII_REAL                                    
+  UNIT                        = "DEGREE"                                      
+  START_BYTE                  = 11                                            
+  BYTES                       = 7                                             
+  FORMAT                      = "F7.1"                                        
+  DESCRIPTION                 = "                                             
+    Pixel latitude southernmost boundary.                                     
+   "                                                                          
+ END_OBJECT                   = COLUMN                                        
+                                                                              
+ OBJECT                       = COLUMN                                        
+  NAME                        = "MAX_LAT"                                     
+  DATA_TYPE                   = ASCII_REAL                                    
+  UNIT                        = "DEGREE"                                      
+  START_BYTE                  = 18                                            
+  BYTES                       = 7                                             
+  FORMAT                      = "F7.1"                                        
+  DESCRIPTION                 = "                                             
+    Pixel latitude northernmost boundary.                                     
+   "                                                                          
+ END_OBJECT                   = COLUMN                                        
+                                                                              
+ OBJECT                       = COLUMN                                        
+  NAME                        = "DELTA_LAT"                                   
+  DATA_TYPE                   = ASCII_REAL                                    
+  UNIT                        = "DEGREE"                                      
+  START_BYTE                  = 25                                            
+  BYTES                       = 7                                             
+  FORMAT                      = "F7.1"                                        
+  DESCRIPTION                 = "                                             
+    Width of pixel in latitude.                                               
+   "                                                                          
+ END_OBJECT                   = COLUMN                                        
+                                                                              
+ OBJECT                       = COLUMN                                        
+  NAME                        = "MIN_LON"                                     
+  DATA_TYPE                   = ASCII_REAL                                    
+  UNIT                        = "DEGREE"                                      
+  START_BYTE                  = 32                                            
+  BYTES                       = 7                                             
+  FORMAT                      = "F7.1"                                        
+  DESCRIPTION                 = "                                             
+    Pixel east longitude westernmost boundary.                                
+   "                                                                          
+ END_OBJECT                   = COLUMN                                        
+                                                                              
+ OBJECT                       = COLUMN                                        
+  NAME                        = "MAX_LON"                                     
+  DATA_TYPE                   = ASCII_REAL                                    
+  UNIT                        = "DEGREE"                                      
+  START_BYTE                  = 39                                            
+  BYTES                       = 7                                             
+  FORMAT                      = "F7.1"                                        
+  DESCRIPTION                 = "                                             
+    Pixel east longitude easternmost boundary.                                
+   "                                                                          
+ END_OBJECT                   = COLUMN                                        
+                                                                              
+ OBJECT                       = COLUMN                                        
+  NAME                        = "DELTA_LON"                                   
+  DATA_TYPE                   = ASCII_REAL                                    
+  UNIT                        = "DEGREE"                                      
+  START_BYTE                  = 46                                            
+  BYTES                       = 7                                             
+  FORMAT                      = "F7.1"                                        
+  DESCRIPTION                 = "                                             
+    Width of pixel in longitude.                                              
+   "                                                                          
+ END_OBJECT                   = COLUMN                                        
+                                                                              
+ OBJECT                       = COLUMN                                        
+  NAME                        = "FE_COUNTING_RATE"                            
+  DATA_TYPE                   = ASCII_REAL                                    
+  UNIT                        = "COUNTS/S"                                    
+  START_BYTE                  = 53                                            
+  BYTES                       = 13                                            
+  FORMAT                      = "E13.3"                                       
+  DESCRIPTION                 = "                                             
+    Fe counting rate at 7.6 MeV corrected for neutron number density          
+    (counts/s).                                                               
+   "                                                                          
+ END_OBJECT                   = COLUMN                                        
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           
